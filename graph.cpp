@@ -53,6 +53,8 @@ class Graph{
                     cin >> b >> c;
                     G[b].incoming_edge.push_back(a);
                     G[a].outgoing_edge.push_back(b);
+                    G[a].incoming_edge.push_back(b);
+                    G[b].outgoing_edge.push_back(a);
                     weight[a][b]=c;
                     weight[b][a]=0;
                 }
